@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.moviesun-usa" name="美劇線上看" version="1.0.0" provider-name="Dainese">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="zh">美劇線上看</summary>
+    <description lang="zh">[COLOR cyan]美劇線上看[/COLOR][CR]MovieSun 線上看</description>
+    <disclaimer lang="zh"></disclaimer>
+    <language>Chinese</language>
+    <platform>all</platform>
+    <license>GPL 2</license>
+    <forum></forum>
+    <source>https://github.com/daineseh/kodi-addon-moviesun-usa</source>
+  </extension>
+</addon>
