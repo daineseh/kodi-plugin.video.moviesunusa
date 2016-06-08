@@ -95,9 +95,10 @@ elif mode[0] == 'resource':
     thumb = args['thumb'][0]
     obj = ParseMovieSunUSA(url)
 
-    for idx, source in enumerate(obj.get_films()):
+    for idx, source in enumerate(obj.get_films(), start=1):
         url = build_url({'mode': 'play', 'folder_name': source})
-        li = xbmcgui.ListItem('%s.%s' % (idx, source))
+        domain = urlparse.urlparse(source).netloc
+        li = xbmcgui.ListItem('[COLOR white]%s.%s[/COLOR]' % (idx, domain))
         li.setArt({'thumb': thumb, 'icon': thumb, 'fanart': thumb})
         xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li, isFolder=True)
     xbmcplugin.endOfDirectory(addon_handle)
